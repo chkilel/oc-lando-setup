@@ -1,0 +1,27 @@
+# The App name, must be unique, check the exitance of the APP by running `lando list --all` befor starting the APP
+# Need to be changed before starting the APP
+name: nameOfTheApp
+
+# Recipe type, lamp stand for linux-apache-mysql-php
+# See https://docs.devwithlando.io for further information
+recipe: lamp
+
+config:
+  webroot: .
+
+# Add additional dependencies or build steps to your service.
+# Note that build steps will ONLY RUN THE FIRST TIME YOU SPIN UP YOUR APP.
+# That means that if you change them you will need to run lando rebuild for them to re-run.
+# See https://docs.devwithlando.io/config/services.html#build-steps
+# This will add October CMS Bootstrapper.
+# See https://github.com/OFFLINE-GmbH/oc-bootstrapper/tree/master
+services:
+  appserver:
+    build:
+      - composer global require offline/oc-bootstrapper
+
+# Add the command `october` to lando.
+# See https://docs.devwithlando.io/config/tooling.html for tooling
+tooling:
+  october:
+    service: appserver
