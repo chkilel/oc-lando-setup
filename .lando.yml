@@ -1,6 +1,6 @@
 # The App name, must be unique, check the exitance of the APP by running `lando list --all` befor starting the APP
 # Need to be changed before starting the APP
-name: nameOfTheApp
+name: nameOfTheApp # MUST BE MODIFIED BEFOR FIRING UP THE LOCAL DEV
 
 # Recipe type, lamp stand for linux-apache-mysql-php
 # See https://docs.devwithlando.io for further information
