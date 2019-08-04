@@ -1,5 +1,5 @@
 # 1. Update .gitignore
-cp -i ./dev/.gitignore.dev ./.gitignore;
+cp -i ./.gitignore.dev ./.gitignore;
 
 # 2. Update or remove .md files 
 rm README.md;
@@ -7,11 +7,11 @@ rm LICENSE;
 rm CONTRIBUTING.md;
 rm ISSUE_TEMPLATE.md;
 rm CHANGELOG.md;
-cp ./dev/README.md.dev ./README.md;
+cp ./README.md.dev ./README.md;
 
 # 3. Switch to dev dependencies
 # Note that this version is modified to work with OC-BOOTSTRAPPER
-cp -f ./dev/composer.json.dev ./composer.json;
+cp -f ./composer.json.dev ./composer.json;
 
 # 4. Update october
 # Composer command prefixed by land because I use a lando DevStack
