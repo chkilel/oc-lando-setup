@@ -11,7 +11,7 @@ cp ../oc-lando-setup/README.md ./README.md;
 
 # 3. Switch to dev dependencies
 # Note that this version is modified to work with OC-BOOTSTRAPPER
-cp -f ../oc-lando-setup/composer.json ./composer.json;
+cp -f ../oc-lando-setup/dev.composer.json ./composer.json;
 
 # 4. Update october
 # Composer command prefixed by land because I use a lando DevStack
