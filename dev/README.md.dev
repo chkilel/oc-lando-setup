@@ -1,6 +1,8 @@
-# About
-Bootstrap an **OctoberCMS** local development environment with [LANDO](https://docs.devwithlando.io/) and [OFFLINE-GmbH/oc-bootstrapper](https://github.com/OFFLINE-GmbH/oc-bootstrapper)
+# New October CMS Project for development
+***
 
+## About
+Bootstrap an **OctoberCMS** local development environment with [LANDO](https://docs.devwithlando.io/) and [OFFLINE-GmbH/oc-bootstrapper](https://github.com/OFFLINE-GmbH/oc-bootstrapper)
 
 ## Setup
 

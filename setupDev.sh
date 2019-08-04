@@ -1,5 +1,5 @@
 # 1. Update .gitignore
-cp ../ocm-lando-setup/.gitignore ./.gitignore;
+cp -i ./dev/.gitignore.dev ./.gitignore;
 
 # 2. Update or remove .md files 
 rm README.md;
@@ -7,11 +7,11 @@ rm LICENSE;
 rm CONTRIBUTING.md;
 rm ISSUE_TEMPLATE.md;
 rm CHANGELOG.md;
-cp ../oc-lando-setup/README.md ./README.md;
+cp ./dev/README.md.dev ./README.md;
 
 # 3. Switch to dev dependencies
 # Note that this version is modified to work with OC-BOOTSTRAPPER
-cp -f ../oc-lando-setup/dev.composer.json ./composer.json;
+cp -f ./dev/composer.json.dev ./composer.json;
 
 # 4. Update october
 # Composer command prefixed by land because I use a lando DevStack

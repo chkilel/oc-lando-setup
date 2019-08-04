@@ -1,0 +1,71 @@
+app:
+    url: 'http://chkilel.lndo.site'
+    locale: en
+    debug: true
+
+cms:
+    theme: oc-bootstrap-theme (https://github.com/prismify/oc-bootstrap-theme.git)
+    edgeUpdates: false
+    enableSafeMode: false
+    # project: XXXX            # Marketplace project ID
+
+database:
+    connection: mysql
+    host: database
+    port: 3306
+    username: lamp
+    password: lamp
+    database: lamp
+
+git:
+    deployment: false
+    bareRepo: true          # Exclude everything except themes and custom plugins in git
+    excludePlugins: false   # Even exclude plugins from your repo. Private plugins will be
+                            # checkout out again during each "install" run. Be careful!
+                            # Manual changes to these plugins will be overwritten.
+
+plugins:
+    - Vdlp.Redirect
+    - Rainlab.Pages
+    - Rainlab.Blog
+    - Rainlab.User
+    - Rainlab.Builder
+    - Indikator.Backend
+    - Inetis.Dump
+    # - LukeTowers.EssentialVars
+    # - LukeTowers.TwigPCRE
+    # - OFFLINE.SiteSearch
+    - OFFLINE.ResponsiveImages
+    
+    # Install a plugin from the official October Marketplace
+    # - OFFLINE.Mall 
+    
+    # Install a plugin from a git repository. The plugin will be cloned
+    # into your local repository and become part of it. You can change the
+    # plugin and modify it to your needs. It won't be checked out again (no updates).
+    # - OFFLINE.Mall (https://github.com/OFFLINE-GmbH/oc-mall-plugin.git)
+    
+    # The ^ marks this plugin as updateable. It will be removed and checked out again
+    # during each call to `october install`. Local changes will be overwritten.
+    # This plugin will stay up to date with the changes of your original plugin repo.
+    # - ^OFFLINE.Mall (https://github.com/OFFLINE-GmbH/oc-mall-plugin.git)
+
+    # Install a specific branch of a plugin. Keep it up-to-date.
+    # - ^OFFLINE.Mall (https://github.com/OFFLINE-GmbH/oc-mall-plugin.git#develop)
+    # - Vendor.Private (user@remote.git)
+    # - Vendor.PrivateCustomBranch (user@remote.git#branch)
+
+
+    #Run lando info and check host in 
+    #           external_connection: {
+    #               host: 'localhost',
+    #               port: '32939'
+    #           },
+mail:
+    # Change the host according to the information above
+    # Must be checked in every start of the Dev Environment because the port change
+    # Or Change it to mail.YOUR_LANDO_APP_NAME.lndo.site like the example below
+    host: mail.chkilel.lndo.site 
+    name: Adil Chehabi
+    address: chkilel@cheha.bi
+    driver: sendmail

@@ -1,0 +1,19 @@
+*
+!.gitignore
+!composer.*
+composer.phar
+!.env.*
+!october.yaml
+!Envoy.blade.php
+!.gitlab-ci.yml
+
+# exclude everything except directory themes/mythemename 
+!/themes
+/themes/*
+!themes/**/*
+/themes/demo
+# and plugins/myplugin
+!/plugins
+/plugins/*
+!/plugins/chkilel
+!plugins/chkilel/*

@@ -1,6 +1,6 @@
 # The App name, must be unique, check the exitance of the APP by running `lando list --all` befor starting the APP
 # Need to be changed before starting the APP
-name: nameOfTheApp # MUST BE MODIFIED BEFOR FIRING UP THE LOCAL DEV
+name: chkilel # MUST BE MODIFIED BEFORE FIRING UP THE LOCAL DEV
 
 # Recipe type, lamp stand for linux-apache-mysql-php
 # See https://docs.devwithlando.io for further information
@@ -17,8 +17,22 @@ config:
 # See https://github.com/OFFLINE-GmbH/oc-bootstrapper/tree/master
 services:
   appserver:
+  # Adding offline/oc-bootstrapper to the build
     build:
       - composer global require offline/oc-bootstrapper
+
+  # Adding mailhog to catch sent mail on 
+  # *** mail.YOUR_LANDO_APP_NAME.lndo.site ***
+  # In the backend (mail configuration) switch the Mail method to 'sendmail'
+  mailhog:
+    type: mailhog
+    portforward: true
+    hogfrom:
+      - appserver
+proxy:
+  # Change it to mail.YOUR_LANDO_APP_NAME.lndo.site
+  mailhog:
+    - mail.chkilel.lndo.site
 
 # Add the command `october` to lando.
 # See https://docs.devwithlando.io/config/tooling.html for tooling
