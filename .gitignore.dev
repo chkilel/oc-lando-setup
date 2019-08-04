@@ -9,11 +9,19 @@ composer.phar
 
 # exclude everything except directory themes/mythemename 
 !/themes
+!/themes/chkilel
 /themes/*
-!themes/**/*
+themes/**/*
 /themes/demo
 # and plugins/myplugin
 !/plugins
 /plugins/*
 !/plugins/chkilel
 !plugins/chkilel/*
+
+# exclude some needed files
+!.lando.yml
+!october.yml
+!composer.json.dev 
+!.gitignore.dev
+!README.md.dev
