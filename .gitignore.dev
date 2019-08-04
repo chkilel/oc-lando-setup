@@ -25,3 +25,4 @@ themes/**/*
 !composer.json.dev 
 !.gitignore.dev
 !README.md.dev
+!setupDev.sh
